@@ -1,17 +1,20 @@
 'use strict';
 
 const express = require('express');
+const router = express.Router();
+const path = require('path');
+const app = express();
+
+router.get('/', function (req, res) {
+    res.sendFile(path.join(__dirname + '/index.html'));
+});
 
 // Constants
 const PORT = 8080;
 const HOST = '0.0.0.0';
 
-// App
-const app = express();
-app.get('/', (req, res) => {
-    res.send('test ok');
-});
+app.use('/', router);
 
 app.listen(PORT, HOST, () => {
-    console.log(`Running on http://${HOST}:${PORT}`);
+    console.log(`On http://${HOST}:${PORT}`);
 });

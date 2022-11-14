@@ -16,5 +16,5 @@ const HOST = '0.0.0.0';
 app.use('/', router);
 
 app.listen(PORT, HOST, () => {
-    console.log(`On http://${HOST}:${PORT}`);
+    console.log(`On localhost://${HOST}:${PORT}`);
 });

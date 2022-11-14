@@ -1,2 +1,3 @@
 docker build . -t "visto"
 docker run -p 8080:8080 visto
+docker push name registery

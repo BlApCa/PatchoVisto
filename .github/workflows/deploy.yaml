@@ -50,14 +50,14 @@ jobs:
       - name: DigitalOcean App Platform deployment
         uses: digitalocean/app_action@v1.1.3
         with:
-          app_name: devopsvisto
+          app_name: king-prawn-app
           token: ${{ secrets.DIGITALOCEAN_ACCESS_TOKEN }}
-          images: '[{
-                "name": "visto",
+          images: '
+                "name": "PatchoVisto-visto",
                 "image":{
                   "registry_type": "DOCKER_HUB",
                   "registry": "visto",
-                  "repository": "devopsvisto",
+                  "repository": "PatchoVisto",
                   "tag": "${{steps.ref.outputs.version}}"
                  }
               }]'

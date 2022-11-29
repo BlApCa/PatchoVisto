@@ -32,7 +32,7 @@ jobs:
       
       - name: Build docker image
         run: >-
-          docker build docker/secure
+          docker build ./secure
           --label "org.label-schema.vcs-ref=$GITHUB_SHA"
           --tag $DOCKER_IMAGE
       - run: docker push $DOCKER_IMAGE
@@ -82,7 +82,7 @@ jobs:
         with:
           username: ${{ secrets.DOCKER_USER }}
           password: ${{ secrets.DOCKER_PASSWORD }}
-      - name: pull image
+      - name: pull image+
         run: docker pull ${{ secrets.DOCKER_USER }}/secure:${{steps.ref.outputs.version}}
       - uses: actions/checkout@v2
       - name: Login to Scaleway Container Registry

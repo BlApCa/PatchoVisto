@@ -32,7 +32,7 @@ jobs:
       
       - name: Build docker image
         run: >-
-          docker build ./secure
+          docker build .
           --label "org.label-schema.vcs-ref=$GITHUB_SHA"
           --tag $DOCKER_IMAGE
       - run: docker push $DOCKER_IMAGE

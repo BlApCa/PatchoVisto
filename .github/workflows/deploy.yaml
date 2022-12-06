@@ -52,15 +52,16 @@ jobs:
         with:
           app_name: king-prawn-app
           token: ${{ secrets.DIGITALOCEAN_ACCESS_TOKEN }}
-          images: '[(
+          images: [
                 "name": "PatchoVisto-visto",
                 "image":{
                   "registry_type": "DOCKER_HUB",
                   "registry": "visto",
                   "repository": "PatchoVisto",
                   "tag": "${{steps.ref.outputs.version}}"
-                 }
-              }]'
+                }
+          ]
+          
   
   # deploy-sc:
     

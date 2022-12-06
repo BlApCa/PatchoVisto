@@ -53,7 +53,7 @@ jobs:
           app_name: king-prawn-app
           token: ${{ secrets.DIGITALOCEAN_ACCESS_TOKEN }}
           images: '[{
-                "name": "visto",
+                "name": "PatchoVisto",
                 "image":{
                   "registry_type": "DOCKER_HUB",
                   "registry": "visto",
